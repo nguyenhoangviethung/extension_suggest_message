@@ -1,0 +1,26 @@
+{
+    "manifest_version": 3,
+    "name": "Messenger Suggestions",
+    "version": "1.0",
+    "description": "How to reply message attractive?",
+    "permissions": ["storage", "scripting", "activeTab"],
+    "host_permissions": ["https://www.messenger.com/*", "https://www.facebook.com/*"],
+    "background": {
+      "service_worker": "/background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["https://www.messenger.com/*", "https://www.facebook.com/*"],
+        "js": ["content.js"],
+        "run_at": "document_idle"
+      }
+    ],
+    "action": {
+      "default_popup": "popup/popup.html",
+      "default_icon": {
+        "128": "images/icon.png"
+      }
+    }
+  }
+  
+  
