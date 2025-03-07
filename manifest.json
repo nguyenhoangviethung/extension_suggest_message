@@ -6,7 +6,8 @@
     "permissions": ["storage", "scripting", "activeTab"],
     "host_permissions": ["https://www.messenger.com/*", "https://www.facebook.com/*"],
     "background": {
-      "service_worker": "/background.js"
+      "service_worker": "background.js",
+      "type": "module"
     },
     "content_scripts": [
       {
