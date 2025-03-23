@@ -9,6 +9,7 @@ export const configData = {
         "Enter",
         "You sent",
         "Sent",
-        "Sending"
+        "Sending",
+        "Enter"
     ]
 };
