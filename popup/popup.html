@@ -1,19 +1,57 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Message Mapper</title>
-    <link rel="stylesheet" href="../styles/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Suggest Message Extension</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h2>Message Mapper</h2>
-        <label for="messageDropdown">Chọn tin nhắn:</label>
-        <select id="messageDropdown"></select>
-        <h3>Kết quả:</h3>
-        <p id="outputText">Chưa có dữ liệu</p>
+  <div class="tabs">
+    <div class="tab active" data-target="use">Use</div>
+    <div class="tab" data-target="contribute">Contribute</div>
+    <div class="tab" data-target="browse">Browse</div>
+  </div>
+
+  <!-- Use Panel -->
+  <div id="use" class="panel active">
+    <label for="msgSelect">Chọn tin nhắn:</label>
+    <select id="msgSelect">
+      <!-- Options populated by script -->
+    </select>
+    <label>Hoặc nhập tin nhắn:</label>
+    <textarea id="msgInput" rows="3" placeholder="Nhập ở đây..."></textarea>
+    <button id="applyBtn">Áp dụng</button>
+    <h4>Kết quả:</h4>
+    <div id="result"></div>
+  </div>
+
+  <!-- Contribute Panel -->
+  <div id="contribute" class="panel">
+    <h4>Đóng góp lời thả thính</h4>
+    <label>Keyword (ngăn cách bởi dấu phẩy):</label>
+    <input type="text" id="keywords" placeholder="tình yêu, lãng mạn" />
+    <label>Text:</label>
+    <textarea id="flirtText" rows="2" placeholder="Câu thả thính..."></textarea>
+    <button id="submitFlirt">Gửi thả thính</button>
+    <hr />
+    <h4>Đóng góp ảnh</h4>
+    <input type="file" id="imageFile" accept="image/*" />
+    <textarea id="imageCaption" rows="2" placeholder="Text cho ảnh..."></textarea>
+    <button id="submitImage">Gửi ảnh</button>
+  </div>
+
+  <!-- Browse Panel -->
+  <div id="browse" class="panel">
+    <h4>Danh sách đóng góp</h4>
+    <div class="item-list" id="contribList">
+      <!-- Items populated by script -->
     </div>
-    <script src="popup.js"></script>
+  </div>
+
+  <script type="module" src="../scripts/tabs.js"></script>
+  <script type="module" src="../scripts/use.js"></script>
+  <script type="module" src="../scripts/contribute.js"></script>
+  <script type="module" src="../scripts/browse.js"></script>
 </body>
 </html>
