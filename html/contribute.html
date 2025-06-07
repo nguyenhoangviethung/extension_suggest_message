@@ -1,0 +1,35 @@
+<!-- html/contribute.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Đóng góp lời thả thính</title>
+  <link rel="stylesheet" href="../styles/contribute.css">
+</head>
+<body>
+  
+  <button id="backBtn">⬅ Quay lại</button>
+  <h2>Đóng góp lời thả thính</h2>
+  <label>Keyword (ngăn cách bởi dấu phẩy):</label>
+  <input type="text" id="keywords" placeholder="tình yêu, lãng mạn" />
+  <label>Text:</label>
+  <textarea id="flirtText" rows="2" placeholder="Câu thả thính..."></textarea>
+  <div class="action-row">
+    <button id="submitFlirt">Gửi thả thính</button>
+    <label id="flirtMsg" class="msg-label hidden-msg">Đã gửi!</label>
+  </div>
+  <hr />
+  <h4>Đóng góp ảnh</h4>
+  <input type="file" id="imageFile" accept="image/*" />
+  <textarea id="imageLink" rows="2" placeholder="Đường link ảnh..."></textarea>
+  <div class="action-row">
+    <button id="submitImage">Gửi thả thính</button>
+    <label id="flirtImg" class="msg-label hidden-msg">Đã gửi!</label>
+  </div>
+  <button id="previewBtn">Xem trước ảnh</button>
+  <br>
+  <img id="previewImage" style="max-width: 300px; display: none;" alt="Xem trước ảnh">
+  <script type="module" src="../scripts/contribute.js"></script>
+</body>
+</html>

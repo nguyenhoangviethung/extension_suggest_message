@@ -16,3 +16,14 @@ export function removeIgnoreWords(message) {
     return message;
 }
 
+export function updateLabelMessage(labelEl, message, color = "black", duration = 2000) {
+  if (!labelEl) return;
+
+  labelEl.textContent = message;
+  labelEl.style.color = color;
+  labelEl.classList.remove("hidden-msg");
+
+  setTimeout(() => {
+    labelEl.classList.add("hidden-msg");
+  }, duration);
+}

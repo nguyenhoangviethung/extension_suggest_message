@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bảng quản trị Admin</title>
+  <link rel="stylesheet" href="../styles/admin.css" />
+</head>
+<body>
+  <h2>Bảng quản trị Admin</h2>
+
+  <div class="action-row">
+    <button id="buildIndexBtn" type="submit">Build Index</button>
+    <label id="buildIndexStatus" class="msg-label hidden-msg">Đã build!</label>
+  </div>
+
+  <div class="action-row">
+    <button id="preDataBtn" type="submit">Preprocess Data</button>
+    <label id="preDataStatus" class="msg-label hidden-msg">Đã xử lý!</label>
+  </div>
+
+  <section>
+    <h3>Duyệt câu nói</h3>
+    <table id="pendingMessages" aria-label="Bảng duyệt câu nói">
+      <thead>
+        <tr>
+          <th>Nội dung câu nói</th>
+          <th>Hành động</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- JS sẽ tạo hàng <tr> ở đây -->
+      </tbody>
+    </table>
+    <label id="messageStatus" class="msg-label hidden-msg">Đã duyệt câu!</label>
+  </section>
+
+  <section>
+    <h3>Duyệt ảnh</h3>
+    <table id="pendingImages" aria-label="Bảng duyệt ảnh">
+      <thead>
+        <tr>
+          <th>Ảnh & Mô tả</th>
+          <th>Hành động</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- JS sẽ tạo hàng <tr> ở đây -->
+      </tbody>
+    </table>
+    <label id="imageStatus" class="msg-label hidden-msg">Đã duyệt ảnh!</label>
+  </section>
+
+  <script type="module" src="../scripts/admin.js"></script>
+</body>
+</html>

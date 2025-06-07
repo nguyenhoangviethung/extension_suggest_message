@@ -17,11 +17,17 @@
       }
     ],
     "action": {
-      "default_popup": "popup/popup.html",
+      "default_popup": "html/popup.html",
       "default_icon": {
         "128": "images/icon.png"
       }
+    },
+    "web_accessible_resources": [
+    {
+      "resources": ["config.json", "html/contribute.html", "html/admin.html","scripts/*.js"],
+      "matches": ["<all_urls>"]
     }
+    ]
   }
   
   

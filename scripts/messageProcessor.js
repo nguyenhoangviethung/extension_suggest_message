@@ -1,4 +1,4 @@
-import { shouldIgnoreMessage, removeIgnoreWords } from './domUtlis.js';
+import { shouldIgnoreMessage, removeIgnoreWords } from './domUtility.js';
 export function processMessage(messageArray, name) {
     let messageSet = new Set();
     

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Suggest Message Extension</title>
+  <link rel="stylesheet" href="../styles/popup.css" />
+
+</head>
+<body>
+  <div class="nav-buttons">
+    <button id="contributeBtn">Đóng góp</button>
+    <button id="adminBtn">Admin</button>
+  </div>
+
+  <div class="panel active">
+    <h3>Sử dụng gợi ý tin nhắn</h3>
+    <label for="msgSelect">Chọn tin nhắn:</label>
+    <select id="msgSelect"></select>
+
+    <label>Hoặc nhập tin nhắn:</label>
+    <textarea id="msgInput" rows="3" placeholder="Nhập ở đây..."></textarea>
+    <button id="applyBtn">Áp dụng</button>
+
+    <h4>Kết quả từ API:</h4>
+    <select id="resultList" size="5" style="width: 100%;"></select>
+
+    <h4>Nội dung chọn:</h4>
+    <div id="copySection">
+      <textarea id="selectedResult"></textarea>
+      <button id="copyBtn">📋</button>
+    </div>
+  </div>
+
+  <script type="module" src="../scripts/use.js"></script>
+</body>
+</html>
