@@ -103,7 +103,6 @@ import {updateLabelMessage} from "./domUtility.js"
             }
 
         } else {
-            alert(link);
             try {
                 const res = await fetch(apiUrl+"cloudinary/upload-image", {
                     method: "POST",
@@ -145,7 +144,7 @@ import {updateLabelMessage} from "./domUtility.js"
             previewImage.style.display = "block";
         } else {
             previewImage.style.display = "none";
-            alert("Vui lòng chọn file hoặc nhập link ảnh.");
+            updateLabelMessage(flirtImg,"Vui lòng upload ảnh lên hoặc nhập link ảnh!", "red")
         }
     });
 })();
