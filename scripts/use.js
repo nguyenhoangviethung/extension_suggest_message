@@ -155,7 +155,11 @@ document.addEventListener("DOMContentLoaded", async () => {
       return;
     }
     navigator.clipboard.writeText(selectedResult.value).then(() => {
-      alert("Đã copy nội dung!");
+      const orginText = copyBtn.textContent;
+      copyBtn.textContent = "Copied!";
+      setTimeout(()=>{
+        copyBtn.textContent = orginText;
+      }, 2000)
     }).catch(err => {
       alert("Copy thất bại: " + err);
     });

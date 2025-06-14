@@ -4,6 +4,12 @@ console.log("🎯 Background script đang chạy!");
 var messageArray = [];
 
 chrome.runtime.onMessage.addListener(async (message, sender, sendResponse) => {
+    chrome.action.setIcon({
+        path: {
+        "48": "images/icon48.png",
+        }
+    });
+    console.log("set icon sucessfully")
     if (message.type === "NEW_MESSAGE") {
         console.log("📩 Tin nhắn từ content script:", message.text);
         messageArray.push(message.text);

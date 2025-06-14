@@ -84,7 +84,10 @@ document.addEventListener("DOMContentLoaded", async () => {
         // Nội dung câu nói cell
         const contentTd = document.createElement("td");
         contentTd.className = "content-cell";
-        contentTd.innerHTML = msg.text.replace(/\n/g, "<br>");
+        contentTd.innerHTML = `
+          <p><strong>Keyword:</strong> ${String(msg.keyword + '\n'|| '').replace(/\n/g, "<br>")}</p>
+          <p><strong>Text:</strong> ${String(msg.text || '').replace(/\n/g, "<br>")}</p>
+        `;
 
         // Nút duyệt + từ chối cell
         const actionTd = document.createElement("td");
